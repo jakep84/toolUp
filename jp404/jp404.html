@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+        <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
+
+        <!--[if IE]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    </head>
+
+    <body class='myError' onload='magicWord()'>
+        <title>Magic_word.app</title>
+        <div class="row">
+            <div class="majorMagic">
+                <div class="fatBoy col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <img src='fatBoy.gif'>
+                </div>
+                <div class="fatBoyText col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h1>404</h1>
+                    <h3>Page Not Found</h3>
+                    <p><a href="#" role="button" class="errorButton btn btn-default">Go to the main page »</a></p>
+                </div>
+            </div>
+        </div>
+        <style>
+            .myError {
+                background-repeat: no-repeat;
+            }
+            .fatBoyText {
+                height:100%;
+                padding-right:20%;
+                margin-top:12%;
+                
+            }
+            .fatBoy {
+                height:100%;
+                padding-left:20%;
+                padding-top:10%;                
+            }
+        </style>
+        <script>
+            magicWord = new Audio('magicWord.mp3'); 
+            if (typeof magicWord.loop == 'boolean')
+            {
+                magicWord.loop = true;
+            }
+            else
+            {
+                magicWord.addEventListener('ended', function() {
+                    this.currentTime = 0;
+                    this.play();
+                }, false);
+            }
+            magicWord.play();
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </body>
+</html>
